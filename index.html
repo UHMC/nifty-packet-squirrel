@@ -1,0 +1,264 @@
+<!DOCTYPE html>
+
+<html class="gr__" lang="en-US"><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+<!-- Begin Jekyll SEO tag v2.5.0 -->
+<title>Nifty Assignment - Packet Squirrel | nifty-packet-squirrel</title>
+<meta name="generator" content="Jekyll v3.7.4">
+<meta property="og:title" content="Nifty Assignment - Packet Squirrel">
+<meta property="og:locale" content="en_US">
+<link rel="canonical" href="https://uhmc.github.io/nifty-packet-squirrel/">
+<meta property="og:url" content="https://uhmc.github.io/nifty-packet-squirrel/">
+<meta property="og:site_name" content="nifty-packet-squirrel">
+<script type="application/ld+json">
+{"headline":"Nifty Assignment - Packet Squirrel","@type":"WebSite","url":"https://uhmc.github.io/nifty-packet-squirrel/","name":"nifty-packet-squirrel","@context":"http://schema.org"}</script>
+<!-- End Jekyll SEO tag -->
+
+    <style class="anchorjs">
+
+    img {
+      display: block;
+      margin-left: auto;
+      margin-right: auto;
+    }
+    #toc_container {
+    background: #f9f9f9 none repeat scroll 0 0;
+    border: 1px solid #aaa;
+    display: table;
+    font-size: 95%;
+    margin-bottom: 1em;
+    padding: 20px;
+    width: auto;
+}
+
+.toc_title {
+    font-weight: 700;
+    text-align: center;
+}
+
+#toc_container li, #toc_container ul, #toc_container ul li{
+    list-style: outside none none !important;
+}
+
+
+
+
+
+    </style><link rel="stylesheet" href="./index_files/style.css">
+  </head>
+  <body data-gr-c-s-loaded="true">
+    <div class="container-lg px-3 my-5 markdown-body">
+
+      <h1><a href="https://uhmc.github.io/nifty-packet-squirrel/">nifty-packet-squirrel</a></h1>
+
+<h1 id="nifty-assignment---packet-squirrel">Nifty Assignment - Packet Squirrel</h1>
+
+<div id="toc_container">
+<p class="toc_title">Contents</p>
+<ul class="toc_list">
+  <li><a href="#background">Background</a></li>
+  <li><a href="#meta-information">Meta Information</a></li>
+  <li><a href="#additional-descriptions">Additional Descriptions</a></li>
+  <li><a href="#device">Device Information</a></li>
+  <li><a href="#setup">Getting Started</a></li>
+    <ul>
+    <li><a href="#download-wireshark">Download Wireshark</a></li>
+    <li><a href="#format-flashdrive">Format Flash Drive</a></li>
+    <li><a href="#connect-ps">Connect to Packet Squirrel (Optional)</a></li>
+    <li><a href="#version-verification">Verify Firmware Version (Optional)</a></li>
+    <li><a href="#upgrade-firmware">Upgrade Firmware (Optional)</a></li>
+    <li><a href="#verify-checksum">Verify Checksum (Optional)</a></li>
+    </ul>
+  <li><a href="#assignment-instructions">Assignment</a></li>
+  <li><a href="#grading">Model Grading Criteria</a></li>
+</ul>
+</div>
+
+
+<h2 id="background">Background<a class="anchorjs-link " href="https://uhmc.github.io/nifty-packet-squirrel/#background" aria-label="Anchor" data-anchorjs-icon="" style="font: 1em/1 anchorjs-icons; padding-left: 0.375em;"></a></h2>
+<p>The Packet Squirrel was released by Hak5 in 2017 as a pocket-sized, stealthy network tool. The Packet Squirrel has three default payloads: 1). Tcpdump; 2). IP Spoof; 3). Open VPN. The payload focused on through this assignment is the payload is switch 1, tcpdump. Tcpdump is a free software package and is a common packet analyzer. Tcpdump outputs pcap files of network traffic that are viewable in Wireshark. Wireshark is a free packet analyzer that is commonly used for network troubleshooting, analysis, development, and education; Wireshark can be used in a positive way to help solve network issues or maliciously such as in capturing usernames and passwords as they are sent across the network. This assignment utilizes the Packet Squirrel tcpdump payload to record network traffic and utilizes Wireshark to review the traffic recorded.   </p>
+
+<h2 id="meta-information">Meta Information<a class="anchorjs-link " href="https://uhmc.github.io/nifty-packet-squirrel/#meta-information" aria-label="Anchor" data-anchorjs-icon="" style="font: 1em/1 anchorjs-icons; padding-left: 0.375em;"></a></h2>
+
+<table>
+  <thead>
+    <tr>
+      <th>Attribute</th>
+      <th>Description</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>Summary</td>
+      <td>Utilize the Packet Squirrel tcpdump payload to gather network traffic and Wireshark to analyze the network traffic and identify unencrypted username/passwords.  </td>
+    </tr>
+    <tr>
+      <td>Topics</td>
+      <td>Hak5, Packet Squirrel, Man in the middle, DNS Spoofing, tcpdump, Wireshark  </td>
+    </tr>
+    <tr>
+      <td>Audience</td>
+      <td>Students who are familiar with Wireshark and have interest in technology gadgets.  </td>
+    </tr>
+    <tr>
+      <td>Difficulty</td>
+      <td>This is designed to be a simple introduction to one function of the Packet Squirrel and the use of Wireshark through the tcpdump payload. Students who have never analyzed network traffic or utilized Wireshark may have a steep learning curve.  </td>
+    </tr>
+    <tr>
+      <td>Strengths</td>
+      <td>Introduction to a modern technological gadget that may be utilized with ethical intent by sysadmin as well as unethical by hackers.  </td>
+    </tr>
+    <tr>
+      <td>Weaknesses</td>
+      <td>It may be difficult to capture traffic through the Packet Squirrel on a machine connected to WiFi. Some machines may throw an error reporting an unsecure network. </td>
+    </tr>
+    <tr>
+      <td>Dependencies</td>
+      <td>Packet Squirrel, Reliable USB power source, short RJ45 connector(s), Access to network ports  </td>
+    </tr>
+    <tr>
+      <td>Variants</td>
+      <td>There are two other default payloads on the Packet Squirrel (OpenVPN and IP Spoofing). Additionally, the focus may expand to other areas of network traffic analysis.  </td>
+    </tr>
+  </tbody>
+</table>
+
+<h2 id="additional-descriptions">Additional Descriptions<a class="anchorjs-link " href="https://uhmc.github.io/nifty-packet-squirrel/#additional-descriptions" aria-label="Anchor" data-anchorjs-icon="" style="font: 1em/1 anchorjs-icons; padding-left: 0.375em;"></a></h2>
+
+<table>
+  <tbody>
+    <tr>
+      <td>Assignment Description</td>
+      <td>This assignment is meant to be a hands-on example of using a popular technological tool in conjunction with a popular network analysis tool, Wireshark.  </td>
+    </tr>
+    <tr>
+      <td>Structure Description</td>
+      <td>The assignment is structured to guide the student through setting up the Packet Squirrel for traffic capture but remains open for more creativity and network analysis.  </td>
+    </tr>
+    <tr>
+      <td>How It Works Description</td>
+      <td>The tcpdump payload on the Packet Squirrel collects network traffic and saves it in a pcap file to be analyzed in Wireshark.   </td>
+    </tr>
+  </tbody>
+</table>
+
+<h2 id="device">Device Information</h2>
+<p>The Packet Squirrel is a small black square with four different ports, a switch, LED, and a button on the top. The Packet Squirrel has by default three payloads and an arming mode which are accessible via the switch on the bottom of the device. This assignment focuses on utilizing the Packet Squirrel with payload 1, tcpdump, to capture network traffic and attempt to gather unencrypted username/password combinations. The image below, created by Taz Bedevilled for Hak5, shows a diagram of the packet Squirrel with each port and switch position labeled.  </p>
+<img src="./index_files/screenshots/ps.png" alt="Hak5 Packet Squirrel picture indicating switch positions" height="400">
+
+<h2 id="setup">Getting Started</h2>
+
+<h3 id="download-wireshark">Download Wireshark</h3>
+
+<ol>
+  <li value="1">	Navigate to the Wireshark website at www.wireshark.org </li>
+  <li value="2">	Click the left circle, ‘Download’ icon. </li>
+    <ul>
+      <li><img src="./index_files/screenshots/wiresharkdownload.png" alt="Image of wireshark download icon/button" height="250"></li>
+    </ul>
+  <li value="3"> 3.	Click the appropriate installer for your machine and follow the on-screen prompts.  </li>
+</ol>
+
+<h3 id="format-flashdrive">Format Flash Drive</h3>
+<p>	By default, most flash drives are formatted in FAT/FAT32. The Packet Squirrel utilizes NTFS or EXT4; as such, the flash drive used in conjunction with the Packet Squirrel will need to be reformatted by following the below directions: </p>
+<ol>
+  <li value="1">Plug flash drive into PC. 	 </li>
+  <li value="2"> From directory, right click on flash drive and select “Format.”   </li>
+    <img src="./index_files/screenshots/format1.png" alt="Format option from rt-click" height="350">
+  <li value="3"> Select NTFS or EXT4 as the file system type. 	 </li>
+    <img src="./index_files/screenshots/format2.png" alt="Format option" height="350">
+  <li value="4"> Check “Quick Format” and press Start. The flash drive will be ready for use with the Packet Squirrel following format. </li>
+</ol>
+
+
+<h3 id="connect-ps">Connect to Packet Squirrel (Optional)</h3>
+<p>		While there is no implicit need to SSH to the Packet Squirrel for this assignment other than verifying the firmware version, it is still helpful to know in utilizing either of the remaining payloads not covered through the course of this assignment.  </p>
+<ol>
+  <li value="1"> With the Packet Squirrel in switch position 4, Arming Mode, plug the packet squirrel into the PC via RJ45 connector. The RJ45 should be connected to the Packet Squirrel on the side of the USB Power.  </li>
+  <li value="2"> Open PuTTY, or another terminal emulator.   </li>
+  <li value="3"> The IP of the Packet Squirrel is ‘172.16.32.1.’  	 </li>
+  <li value="4"> Login as ‘root.’  </li>
+  <li value="5"> The default password is ‘hak5squirrel.’  </li>
+</ol>
+
+<h3 id="version-verification">Verify Firmware Version (Optional)</h3>
+<ol>
+  <li value="1"> SSH into the Packet Squirrel.   </li>
+  <li value="2"> Use the command ‘cat VERSION’ to display the firmware version number.    </li>
+    <img src="./index_files/screenshots/psversionverify.png" alt="Version Verification on Packet Squirrel" height="400">
+</ol>
+
+
+<h3 id="upgrade-firmware">Upgrade Firmware (Optional)</h3>
+<p>		Before getting started, it is good practice to ensure that the hardware utilized is operating on the latest firmware for security and efficiency. To upgrade and verify firmware on the Packet Squirrel, follow the directions below:  </p>
+<ol>
+  <li value="1"> Start by downloading the latest firmware from the Hak5 Download page at https://downloads.hak5.org/squirrel.  	 </li>
+    <img src="./index_files/screenshots/latestfirmware.png" alt="Latest firmware example" height="45">
+  <li value="2"> Verify the download checksum for file integrity.   </li>
+  <li value="3"> Copy the downloaded file to the root of the flash drive previously formatted. Do not rename or alter the file.  </li>
+  <li value="4"> Eject the flash drive and plug the flash drive into an unpowered Packet Squirrel. Switch the Packet Squirrel to switch position 4, Arming Mode, and plug the Packet Squirrel into a reliable power source.  </li>
+  <li value="5"> The upgrade should occur automatically. The LED indicator light should alternate between red and blue while the firmware flash is underway. The indicator light will change to flashing Blue when the upgrade is complete.  </li>
+    <ul>
+      <li> If the update does not occur and the Packet Squirrel is not the most recent try rebooting the Packet Squirrel a second time. If that does not remedy the error, try a different flash drive. Some older flash drives do not register correctly in the Packet Squirrel. </li>
+    </ul>
+</ol>
+
+
+<h3 id="verify-checksum">Verify Checksum (Optional)</h3>
+<p>			Checking the hash file of downloads is important to ensure that the file downloaded is the same as an untampered file as intended by developers and has not been corrupted. If a file has been altered by a third party the hash value will be different from the value provided by the developer. Verifying a hash value may be considered a weak form of data integrity as verification does not verify the file origin. None the less, verifying hash values where available is good practice. The way outlined is merely one of many ways in which checksum may be verified:   </p>
+<ol>
+  <li value="1">  Open Command Prompt. 	 </li>
+  <li value="2">	Navigate to where the file is downloaded.  </li>
+  <li value="3">	Run the command, “CertUtil -hashfile upgrade-3.2.bin SHA256.”  </li>
+    <img src="./index_files/screenshots/sha256.png" alt="sha256 per command line" height="60">
+  <li value="4">	Compare the hash of the downloaded file against the hash supplied by the developer.   </li>
+    <img src="./index_files/screenshots/dlhash.png" alt="Given hash value" height="45">
+  <li value="5">In this case, the downloaded and anticipated checksums match.   </li>
+</ol>
+
+
+
+
+
+
+<h2 id="assignment-instructions">Assignment</h2>
+<p>		Wireshark is a common network analysis tool utilized by system administrators and hackers alike. Within the past few years, there has been a large push for requiring websites to conduct business through encrypted communications using https. Even still, there are websites that utilize http. This assignment is a practicum in utilizing Wireshark after using a technology gadget, the Packet Squirrel, through tcpdump on a network.  </p>
+<ol>
+  <li value="1">	Plug a correctly formatted flash drive into an unplugged Packet Squirrel.  </li>
+  <li>	Insert the Packet Squirrel between a network you want to capture by connecting the network into the ‘Ethernet out’ port above the flash drive and the device to be captured connected via the ‘Ethernet in’ port on the Packet Squirrel.  </li>
+  <li>	Ensure the Packet Squirrel is in switch position 1, closest to the USB Power, and connect the Packet Squirrel to a reliable power source.  </li>
+    <ul>
+      <li>	When booting, the Packet Squirrel LED will flash Green.  </li>
+      <li>	Once booted and the attack is ongoing, the default LED color is Amber/Yellow. </li>
+    </ul>
+  <li>	Visit websites, login to websites, and otherwise simulate network traffic. </li>
+  <li>	When complete, press the button on the top of the Packet Squirrel to conclude the capture. The LED will flash Red once to signal complete then go dark.  </li>
+    <ul>
+      <li>Remove the Packet Squirrel and reconnect the network as it was prior to placing the Packet Squirrel in-between. </li>
+    </ul>
+  <li value="7">Unplug the USB from the Packet Squirrel and plug the USB into a device with Wireshark downloaded. On the drive are nested folders: /loot/tcpdump/…  </li>
+  <li value="8">To filter, select the display filter bar at the top of the screen, examples below: </li>
+    <ul>
+      <li>To clean up the display and filter out the Address Resolution Protocol network traffic, type “not arp” into the display filter.  </li>
+      <li>To specify http traffic, type “http” into the display filter.  </li>
+      <li>To specify http traffic login info captured, type “http.request.method=="POST"” </li>
+    </ul>
+    <li value="9">Analyze the tcpdump through Wireshark and identify different secure and, if applicable, unsecure login attempts.  </li>
+</ol>
+
+<h2 id="grading">Model Grading Criteria</h2>
+<p>Upon successful completion of this assignment the student should have successfully utilized the Packet Squirrel to capture network traffic utilizing the tcpdump payload. The student should have analyzed and identified both encrypted and un-encrypted, as applicable, login attempts made while the payload was running.  </p>
+
+<a href="#toc_container">Return to Top</a>
+
+    </div>
+    <script src="./index_files/anchor.min.js" integrity="sha256-lZaRhKri35AyJSypXXs4o6OPFTbTmUoltBbDCbdzegg=" crossorigin="anonymous"></script>
+    <script>anchors.add();</script>
+
+
+
+
+</body></html>
