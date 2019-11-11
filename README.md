@@ -14,7 +14,7 @@ The Packet Squirrel was released by Hak5 in 2017 as a pocket-sized, stealthy net
 | Difficulty | This is designed to be a simple introduction to one function of the Packet Squirrel and the use of Wireshark through the tcpdump payload. Students who have never analyzed network traffic or utilized Wireshark may have a steep learning curve.   |
 |Strengths | Introduction to a modern technological gadget that may be utilized with ethical intent by sysadmin as well as unethical by hackers.    |
 | Weaknesses | It may be difficult to capture traffic through the Packet Squirrel on a machine connected to WiFi. Some machines may throw an error reporting an unsecure network.   |
-| Dependencies Packet Squirrel, Reliable USB power source, short RJ45 connector(s), Access to network ports |
+| Dependencies | Packet Squirrel, Reliable USB power source, short RJ45 connector(s), Access to network ports |
 | Variants | There are two other default payloads on the Packet Squirrel (OpenVPN and IP Spoofing). Additionally, the focus may expand to other areas of network traffic analysis. |
 
 ### Additional Descriptions
@@ -27,7 +27,7 @@ The Packet Squirrel was released by Hak5 in 2017 as a pocket-sized, stealthy net
 
 ## Device Information
 
-	The Packet Squirrel is a small black square with four different ports, a switch, LED, and a button on the top. The Packet Squirrel has by default three payloads and an arming mode which are accessible via the switch on the bottom of the device. This assignment focuses on utilizing the Packet Squirrel with payload 1, tcpdump, to capture network traffic and attempt to gather unencrypted username/password combinations. The image below, created by Taz Bedevilled for Hak5, shows a diagram of the packet Squirrel with each port and switch position labeled.
+The Packet Squirrel is a small black square with four different ports, a switch, LED, and a button on the top. The Packet Squirrel has by default three payloads and an arming mode which are accessible via the switch on the bottom of the device. This assignment focuses on utilizing the Packet Squirrel with payload 1, tcpdump, to capture network traffic and attempt to gather unencrypted username/password combinations. The image below, created by Taz Bedevilled for Hak5, shows a diagram of the packet Squirrel with each port and switch position labeled.
 
 ![Hak5 image of Packet Squirrel](index_files/screenshots/ps.png)
 
